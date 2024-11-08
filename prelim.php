@@ -111,6 +111,39 @@
       </div>
       <button type="submit" class="btn btn-primary w-10">Submit Student Information</button>
     </form>
+    <h3>Student Details</h3>
+      <p><b>First Name:</b> <span id="displayFirstName"></span></p>
+      <p><b>Last Name:</b> <span id="displayLastName"></span></p>
+      <p><b>Age:</b> <span id="displayAge"></span></p>
+      <p><b>Gender:</b> <span id="displayGender"></span></p>
+      <p><b>Course:</b> <span id="displayCourse"></span></p>
+      <p><b>Email:</b> <span id="displayEmail"></span></p>
+      <h3>Grades</h3>
+      <p><b>Prelim:</b> <span id="displayPrelim"></span></p>
+      <p><b>Midterm:</b> <span id="displayMidterm"></span></p>
+      <p><b>Finals:</b> <span id="displayFinals"></span></p>
+      <h3>Average Grade</h3>
+      <p><span id="displayAverage"></span></p>
     </div> 
+  </div> 
+  <script> 
+    function showGradeForm(event) {
+        event.preventDefault();
+
+        const firstName = document.getElementById('first_name').value;
+        const lastName = document.getElementById('last_name').value;
+        const age = document.getElementById('age').value;
+        const gender = document.querySelector('input[name="gender"]:checked').value;
+        const course = document.getElementById('course').value;
+        const email = document.getElementById('email').value;
+
+        window.studentDetails = { firstName, lastName, age, gender, course, email };
+
+        document.getElementById('studentName').textContent = firstName + ' ' + lastName;
+
+        document.getElementById('enrollmentForm').style.display = 'none';
+        document.getElementById('gradeForm').style.display = 'block';
+        }
+  </script>
 </body>
 </html>
