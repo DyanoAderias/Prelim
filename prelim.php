@@ -44,6 +44,7 @@
         <select id="course" name="course" class="form-select" required>
           <option value="BSIT" checked>BSIT</option>
           <option value="BSHRM">BSHRM</option>
+          <option value="BSBA">BSBA</option>
         </select>
       </div>
       <div class="mb-3">
@@ -105,6 +106,8 @@
         <select id="course" name="course" class="form-select" required>
           <option value="BSIT" checked>BSIT</option>
           <option value="BSHRM">BSHRM</option>
+          <option value="BSBA">BSBA</option>
+          
         </select>
       </div>
       <div class="mb-3">
